@@ -4,6 +4,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map";
 
 const Search = ({ searchResults }) => {
   const router = useRouter();
@@ -17,7 +18,7 @@ const Search = ({ searchResults }) => {
       <Header
         placeholder={`${location} | ${range} | ${numberOfGuest} guests`}
       />
-      <main>
+      <main className="flex">
         <section className="flex-grow pt-14 px-6">
           <p className="text-sm">
             300+ Stays for - {range} - {numberOfGuest} number of guests
@@ -48,6 +49,9 @@ const Search = ({ searchResults }) => {
               )
             )}
           </div>
+        </section>
+        <section className="hidden md:inline-flex md:min-w-[600px]">
+          <Map searchResults={searchResults} />
         </section>
       </main>
       <Footer />

@@ -2,6 +2,7 @@ import "tailwindcss/tailwind.css";
 import "../styles/global.css";
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from "next/router";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 const progress = new ProgressBar({
   size: 4,
